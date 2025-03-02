@@ -89,7 +89,7 @@ func (s *TestSuite) CreateValidatorTxBytes(fees sdk.Coin, gas uint64, msgs []sdk
 }
 
 func (s *TestSuite) GetCometClient() (*cmthttp.HTTP, error) {
-	return cmthttp.New(s.Network.Validators[0].RPCAddress, "/websocket")
+	return cmthttp.New(s.Network.Validators[0].RPCAddress)
 }
 
 // TxGenInfo contains common info for generating transactions for tests.
